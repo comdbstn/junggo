@@ -811,6 +811,14 @@ footer {
     z-index: 10;
 }
 
+.right-bottom {
+    left: auto;
+    right: 30px;
+    bottom: 30px;
+    transform: none;
+    z-index: 10;
+}
+
 .scroll-indicator p {
     margin-bottom: 10px;
     font-size: 0.9rem;
@@ -823,6 +831,7 @@ footer {
     border: 2px solid var(--primary-light);
     border-radius: 20px;
     position: relative;
+    margin-bottom: 15px;
 }
 
 .scroll-indicator .mouse::before {
@@ -836,6 +845,26 @@ footer {
     background-color: var(--primary-light);
     border-radius: 50%;
     animation: scrollDown 2s infinite;
+}
+
+/* 프로그레스바 */
+.progress-bar {
+    width: 100px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background-color: var(--primary-light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 0.3s ease;
 }
 
 /* 반응형 디자인 */
@@ -878,6 +907,15 @@ footer {
     
     .stats-grid, .features-grid, .benefits-grid, .pricing-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .right-bottom {
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    .progress-bar {
+        width: 80px;
     }
 }
 

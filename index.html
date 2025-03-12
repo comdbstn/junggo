@@ -32,7 +32,7 @@
                 <ul>
                     <li><a href="#about">소개</a></li>
                     <li><a href="#service">서비스</a></li>
-                    <li><a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="kakao-chat-btn">
+                    <li><a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="kakao-chat-btn">
                         <img src="kakao-icon.svg" alt="카카오톡">문의하기
                     </a></li>
                 </ul>
@@ -47,12 +47,15 @@
                 <p>이제 검증된 전문가들과 함께 안전한 중고차 거래를 시작해보세요!</p>
                 <div class="hero-buttons">
                     <a href="#service" class="btn-primary">서비스 알아보기</a>
-                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-secondary">문의하기</a>
+                    <a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="btn-secondary">문의하기</a>
                 </div>
             </div>
-            <div class="scroll-indicator center-scroll">
+            <div class="scroll-indicator right-bottom">
                 <p>스크롤하여 더 알아보기</p>
                 <div class="mouse"></div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -168,7 +171,7 @@
                         <li>상세한 검수 보고서 제공</li>
                         <li>차량 상태에 따른 적정 가격 조언</li>
                     </ul>
-                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-service">검수 서비스 문의하기</a>
+                    <a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="btn-service">검수 서비스 문의하기</a>
                 </div>
             </div>
         </div>
@@ -187,7 +190,7 @@
                         <li>적정 가격 협상 지원</li>
                         <li>구매 결정에 필요한 전문적 조언</li>
                     </ul>
-                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-service">동행 서비스 문의하기</a>
+                    <a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="btn-service">동행 서비스 문의하기</a>
                 </div>
                 <div class="service-image">
                     <img src="accompany-service.jpg" alt="동행 서비스" onerror="this.src='icon-users.svg'; this.style.width='100px'; this.style.height='100px';">
@@ -212,7 +215,7 @@
                         <li>즉시 결과 확인</li>
                         <li>전문가 상담</li>
                     </ul>
-                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-pricing">문의하기</a>
+                    <a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="btn-pricing">문의하기</a>
                 </div>
                 <div class="pricing-card featured">
                     <h3>정밀 검수</h3>
@@ -227,7 +230,7 @@
                         <li>전문가 상담</li>
                         <li>30일 보증</li>
                     </ul>
-                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-pricing">문의하기</a>
+                    <a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="btn-pricing">문의하기</a>
                 </div>
                 <div class="pricing-card">
                     <h3>동행 서비스</h3>
@@ -242,7 +245,7 @@
                         <li>현장 상담 및 조언</li>
                         <li>가격 협상 도움</li>
                     </ul>
-                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-pricing">문의하기</a>
+                    <a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="btn-pricing">문의하기</a>
                 </div>
             </div>
         </div>
@@ -252,7 +255,7 @@
         <div class="container">
             <h2>지금 바로 시작하세요</h2>
             <p>검증된 전문가와 함께 안전한 중고차 구매를 시작하세요</p>
-            <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-cta">
+            <a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="btn-cta">
                 <img src="kakao-icon.svg" alt="카카오톡" style="width: 24px; height: 24px; margin-right: 10px;">
                 카카오톡으로 문의하기
             </a>
@@ -269,7 +272,7 @@
                         <p>이메일: info@chasunchek.com</p>
                         <p>전화: 02-123-4567</p>
                     </div>
-                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="kakao-chat-btn">
+                    <a href="https://open.kakao.com/o/sdcMnhlh" target="_blank" class="kakao-chat-btn">
                         <img src="kakao-icon.svg" alt="카카오톡">
                         카카오톡 문의하기
                     </a>
@@ -289,5 +292,14 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // 스크롤 프로그레스바 기능
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.querySelector('.progress').style.width = scrolled + '%';
+        });
+    </script>
 </body>
 </html> 
