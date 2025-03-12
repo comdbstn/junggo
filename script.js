@@ -139,45 +139,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // 윈도우 크기 변경 시 버블 재생성
     window.addEventListener('resize', createBubbles);
 
-    // 타이핑 효과
-    const typingEffect = function() {
-        const heroTitle = document.querySelector('.hero h1');
-        const originalText = heroTitle.innerHTML;
-        const textParts = originalText.split('<span>');
-        const beforeSpan = textParts[0];
-        const spanContent = originalText.match(/<span>(.*?)<\/span>/)[1];
-        const afterSpan = textParts[1].split('</span>')[1] || '';
-        
-        heroTitle.innerHTML = '';
-        
-        let currentText = '';
-        let index = 0;
-        const fullText = beforeSpan + spanContent + afterSpan;
-        
-        const typeText = function() {
-            if (index < fullText.length) {
-                currentText += fullText.charAt(index);
-                
-                // span 태그 처리
-                if (index < beforeSpan.length) {
-                    heroTitle.innerHTML = currentText;
-                } else if (index < beforeSpan.length + spanContent.length) {
-                    const spanPart = spanContent.substring(0, index - beforeSpan.length);
-                    heroTitle.innerHTML = beforeSpan + '<span>' + spanPart + '</span>';
-                } else {
-                    const afterPart = afterSpan.substring(0, index - (beforeSpan.length + spanContent.length));
-                    heroTitle.innerHTML = beforeSpan + '<span>' + spanContent + '</span>' + afterPart;
-                }
-                
-                index++;
-                setTimeout(typeText, 100);
-            }
-        };
-        
-        setTimeout(typeText, 500);
-    };
-    
-    typingEffect();
+    // 히어로 섹션 슬로건 즉시 표시
+    const heroTitle = document.querySelector('.hero h1');
+    if (heroTitle) {
+        heroTitle.style.opacity = '1';
+        heroTitle.style.animation = 'none';
+    }
+
+    const heroContent = document.querySelector('.hero-content');
+    if (heroContent) {
+        heroContent.style.opacity = '1';
+        heroContent.style.animation = 'none';
+    }
 
     // 버튼 호버 효과 강화
     const enhanceButtons = function() {
