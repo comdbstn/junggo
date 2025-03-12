@@ -25,7 +25,6 @@
 ├── script.js           # 자바스크립트 기능
 ├── icon-growth.svg     # 성장률 아이콘
 ├── icon-users.svg      # 사용자 아이콘
-├── icon-ai.svg         # AI 기술 아이콘
 ├── icon-security.svg   # 보안 아이콘
 ├── icon-time.svg       # 시간 아이콘
 └── README.md           # 프로젝트 설명
