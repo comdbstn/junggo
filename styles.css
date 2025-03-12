@@ -87,9 +87,12 @@ header .container {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--primary-light);
+    font-family: 'Black Han Sans', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 nav ul {
@@ -801,6 +804,13 @@ footer {
     animation: float 2s ease-in-out infinite;
 }
 
+.center-scroll {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    z-index: 10;
+}
+
 .scroll-indicator p {
     margin-bottom: 10px;
     font-size: 0.9rem;
@@ -973,5 +983,117 @@ footer {
     100% {
         opacity: 0;
         transform: translateX(-50%) translateY(20px);
+    }
+}
+
+/* 서비스 상세 섹션 */
+.service-detail {
+    background-color: var(--bg-color);
+    padding: 100px 0;
+    position: relative;
+}
+
+.service-detail::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(0, 179, 71, 0.05), transparent 70%);
+    pointer-events: none;
+}
+
+.service-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.service-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    flex: 1;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--card-bg);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-info {
+    flex: 1;
+}
+
+.service-info h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-light);
+}
+
+.service-info p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.service-features {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.service-features li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.service-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-light);
+}
+
+.btn-service {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn-service:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 179, 71, 0.3);
+}
+
+@media (max-width: 992px) {
+    .service-content {
+        flex-direction: column;
+    }
+    
+    .service-content.reverse {
+        flex-direction: column;
+    }
+    
+    .service-image {
+        width: 100%;
+        margin-bottom: 30px;
     }
 } 

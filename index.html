@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>중고차 검수 서비스 사업계획서</title>
+    <title>차선책 - 중고차 검수 서비스</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- 배경 애니메이션 -->
@@ -26,7 +27,7 @@
 
     <header>
         <div class="container">
-            <div class="logo">중고차검수서비스</div>
+            <div class="logo">차선책</div>
             <nav>
                 <ul>
                     <li><a href="#about">소개</a></li>
@@ -42,14 +43,14 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Your <span>bridge</span> to success</h1>
+                <h1>당신의 <span>최선의 선택</span>이 되겠습니다</h1>
                 <p>이제 검증된 전문가들과 함께 안전한 중고차 거래를 시작해보세요!</p>
                 <div class="hero-buttons">
                     <a href="#service" class="btn-primary">서비스 알아보기</a>
                     <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-secondary">문의하기</a>
                 </div>
             </div>
-            <div class="scroll-indicator">
+            <div class="scroll-indicator center-scroll">
                 <p>스크롤하여 더 알아보기</p>
                 <div class="mouse"></div>
             </div>
@@ -151,6 +152,50 @@
         </div>
     </section>
 
+    <section class="service-detail" id="inspection-service">
+        <div class="container">
+            <h2>검수 서비스</h2>
+            <div class="service-content">
+                <div class="service-image">
+                    <img src="inspection-service.jpg" alt="검수 서비스" onerror="this.src='icon-security.svg'; this.style.width='100px'; this.style.height='100px';">
+                </div>
+                <div class="service-info">
+                    <h3>전문가의 꼼꼼한 차량 검수</h3>
+                    <p>차선책의 검수 서비스는 전문 정비사가 직접 차량을 검수하여 숨겨진 문제점을 찾아냅니다. 엔진, 변속기, 전기장치 등 주요 부품부터 차체 상태, 사고 이력까지 철저하게 확인합니다.</p>
+                    <ul class="service-features">
+                        <li>219개 항목 정밀 검사</li>
+                        <li>전문 정비사의 직접 검수</li>
+                        <li>상세한 검수 보고서 제공</li>
+                        <li>차량 상태에 따른 적정 가격 조언</li>
+                    </ul>
+                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-service">검수 서비스 문의하기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail" id="accompany-service">
+        <div class="container">
+            <h2>동행 서비스</h2>
+            <div class="service-content reverse">
+                <div class="service-info">
+                    <h3>전문가와 함께하는 중고차 구매</h3>
+                    <p>차선책의 동행 서비스는 중고차 구매 현장에 전문 정비사가 함께 방문하여 실시간으로 차량을 점검하고 조언해 드립니다. 여러 매물을 비교하고 가격 협상까지 도와드립니다.</p>
+                    <ul class="service-features">
+                        <li>현장에서 실시간 차량 점검</li>
+                        <li>여러 매물 비교 분석</li>
+                        <li>적정 가격 협상 지원</li>
+                        <li>구매 결정에 필요한 전문적 조언</li>
+                    </ul>
+                    <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="btn-service">동행 서비스 문의하기</a>
+                </div>
+                <div class="service-image">
+                    <img src="accompany-service.jpg" alt="동행 서비스" onerror="this.src='icon-users.svg'; this.style.width='100px'; this.style.height='100px';">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="pricing">
         <div class="container">
             <h2>서비스 요금</h2>
@@ -218,10 +263,10 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-info">
-                    <div class="logo">중고차검수서비스</div>
+                    <div class="logo">차선책</div>
                     <p>안전한 중고차 거래의 시작</p>
                     <div class="contact-info">
-                        <p>이메일: info@junggocar.com</p>
+                        <p>이메일: info@chasunchek.com</p>
                         <p>전화: 02-123-4567</p>
                     </div>
                     <a href="https://open.kakao.com/o/soF75u3d" target="_blank" class="kakao-chat-btn">
@@ -232,31 +277,13 @@
                 <div class="footer-links">
                     <h4>서비스</h4>
                     <ul>
-                        <li><a href="#inspection">검수 서비스</a></li>
-                        <li><a href="#accompany">동행 서비스</a></li>
-                        <li><a href="#ebook">전자책</a></li>
-                        <li><a href="#membership">멤버십</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>회사</h4>
-                    <ul>
-                        <li><a href="#about">소개</a></li>
-                        <li><a href="#careers">채용</a></li>
-                        <li><a href="#blog">블로그</a></li>
-                        <li><a href="https://open.kakao.com/o/soF75u3d" target="_blank">문의하기</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>법적 정보</h4>
-                    <ul>
-                        <li><a href="#terms">이용약관</a></li>
-                        <li><a href="#privacy">개인정보처리방침</a></li>
+                        <li><a href="#inspection-service">검수 서비스</a></li>
+                        <li><a href="#accompany-service">동행 서비스</a></li>
                     </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2023 중고차검수서비스. All rights reserved.</p>
+                <p>&copy; 2023 차선책. All rights reserved.</p>
             </div>
         </div>
     </footer>
