@@ -409,6 +409,16 @@ nav .kakao-chat-btn {
     align-items: center;
     position: relative;
     z-index: 1;
+    opacity: 1;
+    animation: none;
+}
+
+.hero-content h1, 
+.hero-content p, 
+.hero-content .hero-buttons {
+    opacity: 1;
+    animation: none;
+    transform: none;
 }
 
 /* 스크롤 인디케이터 */
