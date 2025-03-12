@@ -122,6 +122,20 @@ nav ul {
     background-position: center;
     text-align: center;
     padding-top: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0, 179, 71, 0.1) 0%, rgba(0, 26, 10, 0) 70%);
+    animation: pulse 3s ease-in-out infinite;
+    z-index: 0;
 }
 
 .hero-content {
@@ -130,17 +144,21 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero h1 {
     margin-bottom: 20px;
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
     width: 100%;
 }
 
 .hero h1 span {
     color: var(--primary-light);
     position: relative;
+    display: inline-block;
+    animation: glow 2s ease-in-out infinite;
 }
 
 /* 버튼 스타일 */
@@ -540,7 +558,7 @@ footer {
 .kakao-chat-btn {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     background-color: #FEE500;
     color: #000000;
     padding: 12px 25px;
@@ -552,11 +570,7 @@ footer {
 
 .kakao-chat-btn:hover {
     transform: translateY(-5px);
-}
-
-.kakao-chat-btn img {
-    width: 24px;
-    height: 24px;
+    background-color: #FFDE00;
 }
 
 /* 반응형 디자인 */
@@ -646,24 +660,27 @@ footer {
 @keyframes pulse {
     0% {
         transform: scale(1);
+        opacity: 0.5;
     }
     50% {
         transform: scale(1.05);
+        opacity: 0.8;
     }
     100% {
         transform: scale(1);
+        opacity: 0.5;
     }
 }
 
 @keyframes glow {
     0% {
-        box-shadow: 0 0 5px rgba(0, 179, 71, 0.5);
+        text-shadow: 0 0 5px rgba(0, 179, 71, 0.5);
     }
     50% {
-        box-shadow: 0 0 20px rgba(0, 179, 71, 0.8);
+        text-shadow: 0 0 15px rgba(0, 179, 71, 0.8), 0 0 20px rgba(0, 179, 71, 0.5);
     }
     100% {
-        box-shadow: 0 0 5px rgba(0, 179, 71, 0.5);
+        text-shadow: 0 0 5px rgba(0, 179, 71, 0.5);
     }
 }
 
@@ -708,7 +725,7 @@ footer {
     width: 20px;
     height: 20px;
     background: rgba(0, 179, 71, 0.1);
-    animation: animate 25s linear infinite;
+    animation: animate 15s linear infinite;
     bottom: -150px;
     border-radius: 50%;
 }
@@ -718,6 +735,7 @@ footer {
     width: 80px;
     height: 80px;
     animation-delay: 0s;
+    animation-duration: 12s;
 }
 
 .bg-animation span:nth-child(2) {
@@ -725,7 +743,7 @@ footer {
     width: 20px;
     height: 20px;
     animation-delay: 2s;
-    animation-duration: 12s;
+    animation-duration: 8s;
 }
 
 .bg-animation span:nth-child(3) {
@@ -733,6 +751,7 @@ footer {
     width: 20px;
     height: 20px;
     animation-delay: 4s;
+    animation-duration: 10s;
 }
 
 .bg-animation span:nth-child(4) {
@@ -740,7 +759,7 @@ footer {
     width: 60px;
     height: 60px;
     animation-delay: 0s;
-    animation-duration: 18s;
+    animation-duration: 14s;
 }
 
 .bg-animation span:nth-child(5) {
@@ -748,6 +767,47 @@ footer {
     width: 20px;
     height: 20px;
     animation-delay: 0s;
+    animation-duration: 9s;
+}
+
+.bg-animation span:nth-child(6) {
+    left: 85%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 3s;
+    animation-duration: 11s;
+}
+
+.bg-animation span:nth-child(7) {
+    left: 15%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 5s;
+    animation-duration: 13s;
+}
+
+.bg-animation span:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 7s;
+    animation-duration: 10s;
+}
+
+.bg-animation span:nth-child(9) {
+    left: 80%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 1s;
+    animation-duration: 7s;
+}
+
+.bg-animation span:nth-child(10) {
+    left: 35%;
+    width: 45px;
+    height: 45px;
+    animation-delay: 6s;
+    animation-duration: 12s;
 }
 
 .scroll-indicator .mouse::before {
