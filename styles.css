@@ -125,7 +125,7 @@ nav a:hover {
     height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0, 26, 10, 0.8), rgba(0, 26, 10, 0.9)), url('hero-bg.jpg');
+    background: linear-gradient(rgba(0, 26, 10, 0.8), rgba(0, 26, 10, 0.9));
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -561,7 +561,7 @@ nav a:hover {
 
 /* CTA 섹션 */
 .cta {
-    background: linear-gradient(rgba(0, 26, 10, 0.9), rgba(0, 26, 10, 0.9)), url('cta-bg.jpg');
+    background: linear-gradient(rgba(0, 26, 10, 0.9), rgba(0, 26, 10, 0.9));
     background-size: cover;
     background-position: center;
     text-align: center;
